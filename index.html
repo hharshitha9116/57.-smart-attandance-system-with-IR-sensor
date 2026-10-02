@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Smart Attendance System</h1>
+            <p>IR Sensor Based Student Attendance</p>
+        </header>
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">10</p>
+            </div>
+
+            <div class="card present">
+                <h3>Present</h3>
+                <p id="presentCount">0</p>
+            </div>
+
+            <div class="card absent">
+                <h3>Absent</h3>
+                <p id="absentCount">10</p>
+            </div>
+
+        </section>
+
+        <section class="sensor-panel">
+            <h2>IR Sensor Status</h2>
+
+            <div id="sensorStatus" class="sensor-status">
+                Waiting for student...
+            </div>
+
+            <button onclick="simulateSensor()">
+                Simulate IR Detection
+            </button>
+        </section>
+
+        <section class="attendance-section">
+
+            <h2>Attendance Record</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Roll No.</th>
+                        <th>Student Name</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="attendanceTable">
+                </tbody>
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
